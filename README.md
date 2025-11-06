@@ -27,12 +27,18 @@ Conceptos SOLID, DRY
 - D : Inyeccion de dependencias : se inyecta el lenguaje, pudiendo a futuro cambiar esto sin depender de clases concretas.
 
 DRY = Dont repeat your self, no se copia y se paga codigo en ningun lado, todo es codigo hecho de cero para cada componente, en el unico lugar que se copia codigo es en el imprimir, que podria ir en el base,
-sucede que para ello tendria que implementar un codigo comun en el base, y no hay una figura base, asi que por cuestiones del negocio ese metodo debe copiarse ya que sabe como devolver los otros metodos.
+sucede que para ello tendria que implementar un codigo comun en el base, y me permito aclarar que CADA componente debe saber como imprimirse 
+tambien no hay una figura base, asi que por cuestiones del negocio ese metodo debe copiarse ya que sabe como devolver los otros metodos.
 
-Se usa el patron Strategy. 
+* Se usa el patron Strategy. 
 - permite determinar estrategias de lenguajes y de figuras.
 - se podria implementar tambien un Factory, pero como no se el fin concreto de este proyecto (hablando en terminos de implementacion real) no tiene sentido hacer un factory para devolver los objetos, hubiera sido util si
   tuvira IF (figura = "redondel") en ese caso usaria un factory para devolver el objeto desde una lista de objetos, ya instanciado.
+  esto tambien mejora las pruebas, pero no queria agrandar tanto el Refactoring
+* se usa el patron singleton para leer resource, tuve algunos problemas con esto, si lo necesitan puedo contar un poco mas cuales tuve.
+
+hay muchas mas cosas para mejorar, pero al ser un proyecto pequeno no se puede ir muy alla, sino termina complejizando el tema en vez de mejorarlo.
+saludos y espero que les guste mi trabajo.
 
   
 
