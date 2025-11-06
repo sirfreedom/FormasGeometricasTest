@@ -1,0 +1,107 @@
+<Resources>
+  <resource>
+    <Key>Circulo_Key</Key>
+    <en-US>Circle</en-US>
+    <es-ES>Circulo</es-ES>
+    <it-IT>Cerchio</it-IT>
+    <pl-PL>Kólko</pl-PL>
+  </resource>
+  <resource>
+    <Key>Circulo_Area</Key>
+    <en-US>We calculate the area.</en-US>
+    <es-ES>Calculamos el area</es-ES>
+    <it-IT>Calcoliamo l'area</it-IT>
+    <pl-PL>Obliczamy powierzchnie</pl-PL>
+  </resource>
+  <resource>
+    <Key>Circulo_Perimetro</Key>
+    <en-US>We calculate the perimeter.</en-US>
+    <es-ES>Calculamos el perimetro</es-ES>
+    <it-IT>Calcoliamo il perimetro</it-IT>
+    <pl-PL>Obliczamy obwód</pl-PL>
+  </resource>
+  <resource>
+    <Key>Cuadrado_Key</Key>
+    <en-US>Square</en-US>
+    <es-ES>Cuadrado</es-ES>
+    <it-IT>Quadrato</it-IT>
+    <pl-PL>Kwadrat</pl-PL>
+  </resource>
+  <resource>
+    <Key>Cuadrado_Area</Key>
+    <en-US>We calculate the area.</en-US>
+    <es-ES>Calculamos el area</es-ES>
+    <it-IT>Calcoliamo l'area</it-IT>
+    <pl-PL>Obliczamy powierzchnie</pl-PL>
+  </resource>
+  <resource>
+    <Key>Cuadrado_Perimetro</Key>
+    <en-US>We calculate the perimeter.</en-US>
+    <es-ES>Calculamos el perimetro</es-ES>
+    <it-IT>Calcoliamo il perimetro</it-IT>
+    <pl-PL>Obliczamy obwód</pl-PL>
+  </resource>
+  <resource>
+    <Key>Rectangulo_Key</Key>
+    <en-US>Rectangle</en-US>
+    <es-ES>Rectangulo</es-ES>
+    <it-IT>Rettangolo</it-IT>
+    <pl-PL>Prostokat</pl-PL>
+  </resource>
+  <resource>
+    <Key>Rectangulo_Area</Key>
+    <en-US>We calculate the area.</en-US>
+    <es-ES>Calculamos el area</es-ES>
+    <it-IT>Calcoliamo l'area</it-IT>
+    <pl-PL>Obliczamy powierzchnie</pl-PL>
+  </resource>
+  <resource>
+    <Key>Rectangulo_Perimetro</Key>
+    <en-US>We calculate the perimeter.</en-US>
+    <es-ES>Calculamos el perimetro</es-ES>
+    <it-IT>Calcoliamo il perimetro</it-IT>
+    <pl-PL>Obliczamy obwód</pl-PL>
+  </resource>
+  <resource>
+    <Key>Trapecio_Key</Key>
+    <en-US>Trapeze</en-US>
+    <es-ES>Trapecio</es-ES>
+    <it-IT>Trapezio</it-IT>
+    <pl-PL>Trapez</pl-PL>
+  </resource>
+  <resource>
+    <Key>Trapecio_Area</Key>
+    <en-US>We calculate the area.</en-US>
+    <es-ES>Calculamos el area</es-ES>
+    <it-IT>Calcoliamo l'area</it-IT>
+    <pl-PL>Obliczamy powierzchnie</pl-PL>
+  </resource>
+  <resource>
+    <Key>Trapecio_Perimetro</Key>
+    <en-US>We calculate the perimeter.</en-US>
+    <es-ES>Calculamos el perimetro</es-ES>
+    <it-IT>Calcoliamo il perimetro</it-IT>
+    <pl-PL>Obliczamy obwód</pl-PL>
+  </resource>
+  <resource>
+    <Key>TrianguloEquilatero_Key</Key>
+    <en-US>Equilateral Triangle</en-US>
+    <es-ES>Triangulo Equilatero</es-ES>
+    <it-IT>Triangolo equilatero</it-IT>
+    <pl-PL>Trójkat równoboczny</pl-PL>
+  </resource>
+  <resource>
+    <Key>TrianguloEquilatero_Area</Key>
+    <en-US>We calculate the area.</en-US>
+    <es-ES>Calculamos el area</es-ES>
+    <it-IT>Calcoliamo l'area</it-IT>
+    <pl-PL>Obliczamy powierzchnie</pl-PL>
+  </resource>
+  <resource>
+    <Key>TrianguloEquilatero_Perimetro</Key>
+    <en-US>We calculate the perimeter.</en-US>
+    <es-ES>Calculamos el perimetro</es-ES>
+    <it-IT>Calcoliamo il perimetro</it-IT>
+    <pl-PL>Obliczamy obwód</pl-PL>
+  </resource>
+</Resources>

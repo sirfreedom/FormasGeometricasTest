@@ -44,12 +44,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\FormaGeometrica.cs" />
+    <Compile Include="Classes\Circulo.cs" />
+    <Compile Include="Classes\Cuadrado.cs" />
+    <Compile Include="Classes\GeometricBase.cs" />
+    <Compile Include="Classes\Rectangulo.cs" />
+    <Compile Include="Classes\Trapecio.cs" />
+    <Compile Include="Classes\TrianguloEquilatero.cs" />
+    <Compile Include="Interfaces\IFigura.cs" />
+    <Compile Include="Interfaces\ILocalizationStrategy.cs" />
+    <Compile Include="Languages\LocalizationBase.cs" />
+    <Compile Include="Languages\LocalizationEnglish.cs" />
+    <Compile Include="Languages\LocalizationItalian.cs" />
+    <Compile Include="Languages\LocalizationPolish.cs" />
+    <Compile Include="Languages\LocalizationSpanish.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DevelopmentChallenge.Data.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DevelopmentChallenge.Data.en-US.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DevelopmentChallenge.Data.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DevelopmentChallenge.Data.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevelopmentChallenge.Data.es-ES.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevelopmentChallenge.Data.it-IT.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevelopmentChallenge.Data.pl-PL.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DevelopmentChallenge.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
