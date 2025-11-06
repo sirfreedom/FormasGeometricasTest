@@ -4,21 +4,17 @@ using System.Text;
 
 namespace DevelopmentChallenge.Data.Languages
 {
-    public class LocalizationItalian : ILocalizationStrategy
+    public class LocalizationItalian : LocalizationBase, ILocalizationStrategy
     {
         private const string CULTURE = "it-IT";
-
-        private readonly ResourceManager _resourceManager = new ResourceManager("DevelopmentChallenge.it-IT", typeof(LocalizationItalian).Assembly);
 
         public string GetTexto(string tipo, string clave)
         {
             StringBuilder sbClave = new StringBuilder();
-            string sKey;
             sbClave.Append(tipo);
             sbClave.Append("_");
             sbClave.Append(clave);
-            sKey = _resourceManager.GetString(sbClave.ToString(), new CultureInfo(CULTURE));
-            return sKey;
+            return ReadResource(CULTURE, sbClave.ToString());
         }
 
         public CultureInfo GetCulture() => new CultureInfo(CULTURE);
