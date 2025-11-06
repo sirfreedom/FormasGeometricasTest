@@ -35,12 +35,12 @@ namespace DevelopmentChallenge.Data
 
         public double CalcularArea()
         {
-            throw new NotImplementedException();
+            return ((LongitudBaseMayor + LongitudBaseMenor) / 2) * Altura;
         }
 
         public double CalcularPerimetro()
         {
-            throw new NotImplementedException();
+            return LongitudBaseMayor + LongitudBaseMenor + LadoIzquierdo + LadoDerecho + Altura;
         }
 
         public string Imprimir()

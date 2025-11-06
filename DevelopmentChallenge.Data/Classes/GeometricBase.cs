@@ -19,7 +19,7 @@ namespace DevelopmentChallenge.Data
         {
             get 
             {
-                return MethodBase.GetCurrentMethod().DeclaringType.Name;
+                return this.GetType().Name;
             }
         }
 
