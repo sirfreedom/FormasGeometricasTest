@@ -6,6 +6,9 @@ namespace DevelopmentChallenge.Data.Languages
 {
     public class LocalizationEnglish : LocalizationBase, ILocalizationStrategy
     {
+        /// <summary>
+        /// Cultura del lenguaje
+        /// </summary>
         private const string CULTURE = "en-US";
 
         public string GetTexto(string tipo, string clave)

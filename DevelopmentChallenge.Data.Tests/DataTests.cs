@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using DevelopmentChallenge.Data;
+﻿using System.Text;
+using DevelopmentChallenge.Data.Languages;
 using NUnit.Framework;
 
 namespace DevelopmentChallenge.Data.Tests
@@ -8,85 +7,126 @@ namespace DevelopmentChallenge.Data.Tests
     [TestFixture]
     public class DataTests
     {
-        //[TestCase]
-        //public void TestResumenListaVacia()
-        //{
-        //    Assert.AreEqual("<h1>Lista vacía de formas!</h1>",
-        //        FormaGeometrica.Imprimir(new List<FormaGeometrica>(), 1));
-        //}
 
-        //[TestCase]
-        //public void TestResumenListaVaciaFormasEnIngles()
-        //{
-        //    Assert.AreEqual("<h1>Empty list of shapes!</h1>",
-        //        FormaGeometrica.Imprimir(new List<FormaGeometrica>(), 2));
-        //}
+        [TestCase]
+        public void Test_Cuadrado_Espanol()
+        {
+            IFigura figura;
+            StringBuilder sbTexto = new StringBuilder();
+            figura = new Cuadrado(3, new LocalizationSpanish());
+            Assert.AreEqual(9, figura.CalcularArea());
+            Assert.AreEqual(12, figura.CalcularPerimetro());
+            Assert.IsTrue(figura.Imprimir().Contains("Calculamos"),"La impresión debe incluir el texto esperado en español");
+            Assert.IsFalse(figura.Imprimir().Contains("We calculate"), "La impresión debe incluir el texto esperado en ingles");
+            Assert.IsFalse(figura.Imprimir().Contains("Calcoliamo"), "La impresión debe incluir el texto esperado en italiano");
+        }
 
-        //[TestCase]
-        //public void TestResumenListaConUnCuadrado()
-        //{
-        //    var cuadrados = new List<FormaGeometrica> {new FormaGeometrica(FormaGeometrica.Cuadrado, 5)};
 
-        //    var resumen = FormaGeometrica.Imprimir(cuadrados, FormaGeometrica.Castellano);
+        [TestCase]
+        public void Test_Cuadrado_Ingles()
+        {
+            IFigura figura;
+            StringBuilder sbTexto = new StringBuilder();
+            figura = new Cuadrado(3, new LocalizationEnglish());
+            Assert.AreEqual(9, figura.CalcularArea());
+            Assert.AreEqual(12, figura.CalcularPerimetro());
+            Assert.IsTrue(figura.Imprimir().Contains("We calculate"), "La impresión debe incluir el texto esperado en ingles");
+            Assert.IsFalse(figura.Imprimir().Contains("Calculamos"), "La impresión debe incluir el texto esperado en español");
+            Assert.IsFalse(figura.Imprimir().Contains("Calcoliamo"), "La impresión debe incluir el texto esperado en italiano");
+        }
 
-        //    Assert.AreEqual("<h1>Reporte de Formas</h1>1 Cuadrado | Area 25 | Perimetro 20 <br/>TOTAL:<br/>1 formas Perimetro 20 Area 25", resumen);
-        //}
+        [TestCase]
+        public void Test_Cuadrado_Italiano()
+        {
+            IFigura figura;
+            StringBuilder sbTexto = new StringBuilder();
+            figura = new Cuadrado(3, new LocalizationItalian());
+            Assert.AreEqual(9, figura.CalcularArea());
+            Assert.AreEqual(12, figura.CalcularPerimetro());
+            Assert.IsTrue(figura.Imprimir().Contains("Calcoliamo"), "La impresión debe incluir el texto esperado en italiano");
+            Assert.IsFalse(figura.Imprimir().Contains("Calculamos"), "La impresión debe incluir el texto esperado en español");
+            Assert.IsFalse(figura.Imprimir().Contains("We calculate"), "La impresión debe incluir el texto esperado en ingles");
+        }
 
-        //[TestCase]
-        //public void TestResumenListaConMasCuadrados()
-        //{
-        //    var cuadrados = new List<FormaGeometrica>
-        //    {
-        //        new FormaGeometrica(FormaGeometrica.Cuadrado, 5),
-        //        new FormaGeometrica(FormaGeometrica.Cuadrado, 1),
-        //        new FormaGeometrica(FormaGeometrica.Cuadrado, 3)
-        //    };
 
-        //    var resumen = FormaGeometrica.Imprimir(cuadrados, FormaGeometrica.Ingles);
+        [TestCase]
+        public void Test_Circulo_Espanol()
+        {
+            IFigura figura;
+            StringBuilder sbTexto = new StringBuilder();
+            figura = new Circulo(3, new LocalizationSpanish());
+            Assert.AreEqual(28.274333882308138, figura.CalcularArea());
+            Assert.AreEqual(18.84955592153876, figura.CalcularPerimetro());
+            Assert.IsTrue(figura.Imprimir().Contains("Calculamos"), "La impresión debe incluir el texto esperado en español");
+            Assert.IsFalse(figura.Imprimir().Contains("We calculate"), "La impresión debe incluir el texto esperado en ingles");
+            Assert.IsFalse(figura.Imprimir().Contains("Calcoliamo"), "La impresión debe incluir el texto esperado en italiano");
+        }
 
-        //    Assert.AreEqual("<h1>Shapes report</h1>3 Squares | Area 35 | Perimeter 36 <br/>TOTAL:<br/>3 shapes Perimeter 36 Area 35", resumen);
-        //}
 
-        //[TestCase]
-        //public void TestResumenListaConMasTipos()
-        //{
-        //    var formas = new List<FormaGeometrica>
-        //    {
-        //        new FormaGeometrica(FormaGeometrica.Cuadrado, 5),
-        //        new FormaGeometrica(FormaGeometrica.Circulo, 3),
-        //        new FormaGeometrica(FormaGeometrica.TrianguloEquilatero, 4),
-        //        new FormaGeometrica(FormaGeometrica.Cuadrado, 2),
-        //        new FormaGeometrica(FormaGeometrica.TrianguloEquilatero, 9),
-        //        new FormaGeometrica(FormaGeometrica.Circulo, 2.75m),
-        //        new FormaGeometrica(FormaGeometrica.TrianguloEquilatero, 4.2m)
-        //    };
+        [TestCase]
+        public void Test_Circulo_Ingles()
+        {
+            IFigura figura;
+            StringBuilder sbTexto = new StringBuilder();
+            figura = new Circulo(3, new LocalizationEnglish());
+            Assert.AreEqual(28.274333882308138, figura.CalcularArea());
+            Assert.AreEqual(18.84955592153876, figura.CalcularPerimetro());
+            Assert.IsTrue(figura.Imprimir().Contains("We calculate"), "La impresión debe incluir el texto esperado en ingles");
+            Assert.IsFalse(figura.Imprimir().Contains("Calculamos"), "La impresión debe incluir el texto esperado en español");
+            Assert.IsFalse(figura.Imprimir().Contains("Calcoliamo"), "La impresión debe incluir el texto esperado en italiano");
+        }
 
-        //    var resumen = FormaGeometrica.Imprimir(formas, FormaGeometrica.Ingles);
+        [TestCase]
+        public void Test_Circulo_Italiano()
+        {
+            IFigura figura;
+            StringBuilder sbTexto = new StringBuilder();
+            figura = new Circulo(3, new LocalizationItalian());
+            Assert.AreEqual(28.274333882308138, figura.CalcularArea());
+            Assert.AreEqual(18.84955592153876, figura.CalcularPerimetro());
+            Assert.IsTrue(figura.Imprimir().Contains("Calcoliamo"), "La impresión debe incluir el texto esperado en italiano");
+            Assert.IsFalse(figura.Imprimir().Contains("Calculamos"), "La impresión debe incluir el texto esperado en español");
+            Assert.IsFalse(figura.Imprimir().Contains("We calculate"), "La impresión debe incluir el texto esperado en ingles");
+        }
 
-        //    Assert.AreEqual(
-        //        "<h1>Shapes report</h1>2 Squares | Area 29 | Perimeter 28 <br/>2 Circles | Area 13,01 | Perimeter 18,06 <br/>3 Triangles | Area 49,64 | Perimeter 51,6 <br/>TOTAL:<br/>7 shapes Perimeter 97,66 Area 91,65",
-        //        resumen);
-        //}
 
-        //[TestCase]
-        //public void TestResumenListaConMasTiposEnCastellano()
-        //{
-        //    var formas = new List<FormaGeometrica>
-        //    {
-        //        new FormaGeometrica(FormaGeometrica.Cuadrado, 5),
-        //        new FormaGeometrica(FormaGeometrica.Circulo, 3),
-        //        new FormaGeometrica(FormaGeometrica.TrianguloEquilatero, 4),
-        //        new FormaGeometrica(FormaGeometrica.Cuadrado, 2),
-        //        new FormaGeometrica(FormaGeometrica.TrianguloEquilatero, 9),
-        //        new FormaGeometrica(FormaGeometrica.Circulo, 2.75m),
-        //        new FormaGeometrica(FormaGeometrica.TrianguloEquilatero, 4.2m)
-        //    };
+        [TestCase]
+        public void Test_Rectangulo_Espanol()
+        {
+            IFigura figura;
+            StringBuilder sbTexto = new StringBuilder();
+            figura = new Rectangulo(3,4, new LocalizationSpanish());
+            Assert.AreEqual(12, figura.CalcularArea());
+            Assert.AreEqual(14, figura.CalcularPerimetro());
+            Assert.IsTrue(figura.Imprimir().Contains("Calculamos"), "La impresión debe incluir el texto esperado en español");
+        }
 
-        //    var resumen = FormaGeometrica.Imprimir(formas, FormaGeometrica.Castellano);
+        [TestCase]
+        public void Test_Trapecio_Espanol()
+        {
+            IFigura figura;
+            StringBuilder sbTexto = new StringBuilder();
+            figura = new Trapecio(2,3,4,5,6, new LocalizationSpanish());
+            Assert.AreEqual(15, figura.CalcularArea());
+            Assert.AreEqual(20, figura.CalcularPerimetro());
+            Assert.IsTrue(figura.Imprimir().Contains("Calculamos"), "La impresión debe incluir el texto esperado en español");
+            Assert.IsFalse(figura.Imprimir().Contains("We calculate"), "La impresión debe incluir el texto esperado en ingles");
+            Assert.IsFalse(figura.Imprimir().Contains("Calcoliamo"), "La impresión debe incluir el texto esperado en italiano");
+        }
 
-        //    Assert.AreEqual(
-        //        "<h1>Reporte de Formas</h1>2 Cuadrados | Area 29 | Perimetro 28 <br/>2 Círculos | Area 13,01 | Perimetro 18,06 <br/>3 Triángulos | Area 49,64 | Perimetro 51,6 <br/>TOTAL:<br/>7 formas Perimetro 97,66 Area 91,65",
-        //        resumen);
-        //}
+        [TestCase]
+        public void Test_TrianguloEquilatero_Espanol()
+        {
+            IFigura figura;
+            StringBuilder sbTexto = new StringBuilder();
+            figura = new TrianguloEquilatero(3, new LocalizationSpanish());
+            Assert.AreEqual(3.897114317029974, figura.CalcularArea());
+            Assert.AreEqual(9, figura.CalcularPerimetro());
+            Assert.IsTrue(figura.Imprimir().Contains("Calculamos"), "La impresión debe incluir el texto esperado en español");
+            Assert.IsFalse(figura.Imprimir().Contains("We calculate"), "La impresión debe incluir el texto esperado en ingles");
+            Assert.IsFalse(figura.Imprimir().Contains("Calcoliamo"), "La impresión debe incluir el texto esperado en italiano");
+        }
+
+
     }
 }

@@ -8,7 +8,12 @@ namespace DevelopmentChallenge.Data.Languages
 {
     public abstract class LocalizationBase
     {
-
+        /// <summary>
+        /// Este metodo lee el resource y busca la key y devuelve el dato
+        /// </summary>
+        /// <param name="Culture"></param>
+        /// <param name="Key"></param>
+        /// <returns></returns>
         public string ReadResource(string Culture, string Key)
         {
             string sFile = "DevelopmentChallenge.resx";

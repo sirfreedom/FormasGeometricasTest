@@ -31,12 +31,14 @@ namespace DevelopmentChallenge.Data
         public string Imprimir()
         {
             StringBuilder sbText = new StringBuilder();
-            sbText.Append(Localization.GetTexto(Tipo, "Name"));
+            sbText.Append(Localization.GetTexto(Tipo, "Key"));
+            sbText.AppendLine();
             sbText.Append(Localization.GetTexto(Tipo, "Area"));
             sbText.Append(CalcularArea());
+            sbText.AppendLine();
             sbText.Append(Localization.GetTexto(Tipo, "Perimetro"));
             sbText.Append(CalcularPerimetro());
-
+            sbText.AppendLine();
             return sbText.ToString();
         }
     }

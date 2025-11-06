@@ -7,6 +7,9 @@ namespace DevelopmentChallenge.Data.Languages
 {
     public class LocalizationPolish : LocalizationBase, ILocalizationStrategy
     {
+        /// <summary>
+        /// Cultura del lenguaje
+        /// </summary>
         private const string CULTURE = "pl-PL";
 
         public string GetTexto(string tipo, string clave)
